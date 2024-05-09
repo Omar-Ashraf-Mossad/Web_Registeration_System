@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  flex-direction: column;
+}
+
+.formContainer {
+  max-width: 100%;
+  margin: 5rem 0;
+  width: 100%;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+
+.formContainer .title {
+  font-size: 25px;
+  font-weight: 500;
+
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.formContainer .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.formContainer form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px 0 12px 0;
+}
+
+form .inputComponent {
+  width: calc(100% / 2);
+  margin-bottom: 15px;
+}
+.inputComponent label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.inputComponent input {
+  height: 45px;
+  width: 90%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.inputComponent input:focus,
+.inputComponent input:valid,
+.valid {
+  border-color: #9b59b6;
+}
+.inputComponent input:invalid,
+.invalid {
+  border-color: red;
+}
+.error {
+  color: red;
+  font-size: 12px;
+}
+form .button {
+  height: 45px;
+  margin: 45px 0;
+  width: 100%;
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: white;
+  border: none;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+form .button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+.apiButton {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+  margin-top: 10px;
+  margin-bottom: 1rem;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 2.5%;
+}
+.actor {
+  display: block;
+}
+
+li {
+  background-color: #71b7e6;
+  width: 200px;
+  height: 50px;
+  margin: 1rem 0;
+  display: inline-block;
+  border-radius: 2.5%;
+  padding: 1rem 1rem;
+}
+.list-holder {
+  background-color: #f0f0f0;
+  padding: 0 10px;
+  text-align: center;
+  border-radius: 5%;
+}
+.actors-name {
+  font-size: 18px;
+  padding: 1rem 0;
+  color: #444;
+}
