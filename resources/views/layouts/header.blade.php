@@ -2,7 +2,7 @@
 <div class="container">
   <img src="https://cdn.iconscout.com/icon/free/png-256/free-database-833-458263.png?f=webp" alt="" class="logo">
   <div class="header">
-    <a href="#">register</a>
+    <a href={{route('Register')}}>register</a>
     <div class="con">
       <input type="text" class="srch" placeholder="search here">
     </div>
