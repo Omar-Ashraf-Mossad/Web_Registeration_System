@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-   Register
+   Login
     
 @endsection
 {{-- using master layout css and appending index.css --}}
@@ -23,10 +23,10 @@
 
     <div class="formContainer">
 
-        <div class="title">Registeration Form</div> <span class="error">*all fields are required except user image</span>
+        <div class="title">Login Form</div> <span class="error"></span>
 
 
-        <form class="registerForm" method="POST" action="DB_Ops.php" enctype="multipart/form-data">
+        <form class="registerForm" method="POST" action= {{route("LoginUser")}} enctype="multipart/form-data">
             @csrf
 
             <div class="inputComponent">

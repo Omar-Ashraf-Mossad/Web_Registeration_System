@@ -27,13 +27,9 @@ function validateEmail() {
     email = document.getElementsByName("email")[0];
 
     if (email.value == "") {
-        document
-            .getElementsByName("email")[0]
-            .setCustomValidity("Invalid field.");
         document.getElementsByName("emailError")[0].innerHTML =
             "*This field can't be empty";
-    }
-    if (email.checkValidity()) {
+    } else if (email.checkValidity()) {
         document.getElementsByName("emailError")[0].innerHTML = "";
     } else {
         document.getElementsByName("emailError")[0].innerHTML =
@@ -122,7 +118,7 @@ function checkUser(username) {
             }
         }
     };
-    xhttp.open("GET", "DB_Ops.php?name=" + username);
+    xhttp.open("GET", "/checkUser/" + username);
     xhttp.send();
 }
 
@@ -143,14 +139,9 @@ function validateDate() {
     date = document.getElementsByName("birthDate")[0];
 
     if (date.value == "") {
-        document
-            .getElementsByName("birthDate")[0]
-            .setCustomValidity("Invalid field.");
         document.getElementsByName("birthDateError")[0].innerHTML =
             "*This field can't be empty";
-    }
-    if (date.checkValidity()) {
-        document.getElementsByName("birthDate")[0].setCustomValidity("");
+    } else if (date.checkValidity()) {
         document.getElementsByName("birthDateError")[0].innerHTML = "";
     } else {
         document.getElementsByName("birthDate")[0].innerHTML =
@@ -161,14 +152,9 @@ function validateAddress() {
     address = document.getElementsByName("address")[0];
 
     if (address.value == "") {
-        document
-            .getElementsByName("address")[0]
-            .setCustomValidity("Invalid field.");
-
         document.getElementsByName("addressError")[0].innerHTML =
             "*This field can't be empty";
     } else {
-        address.setCustomValidity("");
         document.getElementsByName("addressError")[0].innerHTML = "";
     }
 }
@@ -221,7 +207,7 @@ function getActors() {
             }
         }
     };
-    xhttp.open("GET", "API_Ops.php?day=" + day + "&month=" + month);
+    xhttp.open("GET", "/getActors/" + month + "/" + day);
     xhttp.send();
 }
 window.onload = function () {
