@@ -57,7 +57,7 @@ class AuthManager extends Controller
         $user->birthdate = $request->birthDate;
 
         if ($user->save()) {
-            return redirect()->route('Home')->with('success', 'Registration successful');
+            return redirect()->route('Home')->with('success', 'insertion performed successfully');
         } else {
             return back()->withInput()->with('error', 'Failed to register user');
         }
