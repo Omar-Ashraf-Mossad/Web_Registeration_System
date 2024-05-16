@@ -44,10 +44,15 @@ class AuthManager extends Controller
                 'min:8',
                 'regex: /[^\w\d]|_/'
             ),
-            'userimage' =>'nullable|file/image'
+            'userImage' =>'nullable|image|mimes:jpeg,png,jpg,gif'
         ],$messages);
 
         $user = new User();
+        if($request->hasFile('userImage')){
+                $image = $request->file('userImage');
+                $name= $request->userName.'.'.$image->getClientOriginalExtension();
+                $user->user_image = $image->storeAs('images',$name);
+        }
         $user->full_name = $request->fullName;
         $user->user_name = $request->userName;
         $user->email = $request->email;
