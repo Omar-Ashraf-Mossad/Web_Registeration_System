@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeEmail;
 class FetchController extends Controller
 {
     public function getActorIds($month, $day)
@@ -46,4 +48,11 @@ class FetchController extends Controller
         $actorString = implode(', ', $actors);
         return $actorString;
     }
+    public function sendEmail($message){
+        $toEmail="narutoomar12@gmail.com";
+        $subject= "New User";
+        Mail::to($toEmail)->send(new WelcomeEmail($message,$subject));
+        
+    }
 }
+                                   

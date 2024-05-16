@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\User;
-
+use App\Http\Controllers\FetchController;
 class AuthManager extends Controller
 {
 
@@ -62,7 +62,11 @@ class AuthManager extends Controller
         $user->birthdate = $request->birthDate;
 
         if ($user->save()) {
+            $email=new FetchController();
+            $email->sendEmail($user->user_name." has succefully signed up"); 
             return redirect()->route('Home')->with('success', 'insertion performed successfully');
+
+        
         } else {
             return back()->withInput()->with('error', 'Failed to register user');
         }
