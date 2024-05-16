@@ -9,8 +9,7 @@ function validateFullName() {
         document
             .getElementsByName("fullName")[0]
             .setCustomValidity("Invalid field.");
-        document.getElementsByName("fullNameError")[0].innerHTML =
-            "*This field can't be empty";
+        document.getElementsByName("fullNameError")[0].innerHTML = empty_error;
     } else if (pattern.test(name)) {
         document.getElementsByName("fullName")[0].setCustomValidity("");
         document.getElementsByName("fullNameError")[0].innerHTML = "";
@@ -18,8 +17,9 @@ function validateFullName() {
         document
             .getElementsByName("fullName")[0]
             .setCustomValidity("Invalid field.");
+
         document.getElementsByName("fullNameError")[0].innerHTML =
-            "*Full name must contain at least two names spearated by space";
+            fullname_error;
     }
 }
 
@@ -27,13 +27,11 @@ function validateEmail() {
     email = document.getElementsByName("email")[0];
 
     if (email.value == "") {
-        document.getElementsByName("emailError")[0].innerHTML =
-            "*This field can't be empty";
+        document.getElementsByName("emailError")[0].innerHTML = empty_error;
     } else if (email.checkValidity()) {
         document.getElementsByName("emailError")[0].innerHTML = "";
     } else {
-        document.getElementsByName("emailError")[0].innerHTML =
-            "*Please enter a valid email";
+        document.getElementsByName("emailError")[0].innerHTML = email_error;
     }
 }
 
@@ -44,8 +42,7 @@ function validatePhone() {
         document
             .getElementsByName("phone")[0]
             .setCustomValidity("Invalid field.");
-        document.getElementsByName("phoneError")[0].innerHTML =
-            "*This field can't be empty";
+        document.getElementsByName("phoneError")[0].innerHTML = empty_error;
     } else if (pattern.test(phone)) {
         document.getElementsByName("phone")[0].setCustomValidity("");
         document.getElementsByName("phoneError")[0].innerHTML = "";
@@ -53,8 +50,7 @@ function validatePhone() {
         document
             .getElementsByName("phone")[0]
             .setCustomValidity("Invalid field.");
-        document.getElementsByName("phoneError")[0].innerHTML =
-            "*phone number must be 11 digit and starts with either[011,010,012]";
+        document.getElementsByName("phoneError")[0].innerHTML = phone_error;
     }
 }
 
@@ -66,8 +62,7 @@ function validatePassword() {
         document
             .getElementsByName("password")[0]
             .setCustomValidity("Invalid field.");
-        document.getElementsByName("passError")[0].innerHTML =
-            "*This field can't be empty";
+        document.getElementsByName("passError")[0].innerHTML = empty_error;
     } else if (
         specialChars.test(pass) &&
         number.test(pass) &&
@@ -79,8 +74,7 @@ function validatePassword() {
         document
             .getElementsByName("password")[0]
             .setCustomValidity("Invalid field.");
-        document.getElementsByName("passError")[0].innerHTML =
-            "*Password must be at least 8 characters and contain at least 1 number and 1 special character";
+        document.getElementsByName("passError")[0].innerHTML = pass_error;
     }
     validateConfirmPassword();
 }
@@ -95,8 +89,7 @@ function validateConfirmPassword() {
         document
             .getElementsByName("confirmPassword")[0]
             .setCustomValidity("Invalid field.");
-        document.getElementsByName("confirmError")[0].innerHTML =
-            "*Passwords doesn't match";
+        document.getElementsByName("confirmError")[0].innerHTML = confirm_error;
     }
 }
 
@@ -114,7 +107,7 @@ function checkUser(username) {
                     .getElementsByName("userName")[0]
                     .setCustomValidity("Invalid field.");
                 document.getElementsByName("userNameError")[0].innerHTML =
-                    "*This username already exists";
+                    username_error;
             }
         }
     };
@@ -129,8 +122,7 @@ function validateUserName() {
         document
             .getElementsByName("userName")[0]
             .setCustomValidity("Invalid field.");
-        document.getElementsByName("userNameError")[0].innerHTML =
-            "*This field  can't be empty";
+        document.getElementsByName("userNameError")[0].innerHTML = empty_error;
     } else {
         checkUser(name);
     }
@@ -139,21 +131,18 @@ function validateDate() {
     date = document.getElementsByName("birthDate")[0];
 
     if (date.value == "") {
-        document.getElementsByName("birthDateError")[0].innerHTML =
-            "*This field can't be empty";
+        document.getElementsByName("birthDateError")[0].innerHTML = empty_error;
     } else if (date.checkValidity()) {
         document.getElementsByName("birthDateError")[0].innerHTML = "";
     } else {
-        document.getElementsByName("birthDate")[0].innerHTML =
-            "*Please select a valid Date";
+        document.getElementsByName("birthDate")[0].innerHTML = date_error;
     }
 }
 function validateAddress() {
     address = document.getElementsByName("address")[0];
 
     if (address.value == "") {
-        document.getElementsByName("addressError")[0].innerHTML =
-            "*This field can't be empty";
+        document.getElementsByName("addressError")[0].innerHTML = empty_error;
     } else {
         document.getElementsByName("addressError")[0].innerHTML = "";
     }
@@ -174,8 +163,7 @@ function getActors() {
     date = document.getElementsByName("birthDate")[0];
 
     if (!date.checkValidity()) {
-        document.getElementsByName("birthDateError")[0].innerHTML =
-            "*Please enter a valid date";
+        document.getElementsByName("birthDateError")[0].innerHTML = date_error;
         return;
     } else {
         document.getElementsByName("birthDateError")[0].innerHTML = "";

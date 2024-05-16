@@ -1,11 +1,21 @@
 <?php
 
 return[
+    'holder_full_name' => "أدخل اسمك الكامل",
+    'holder_user_name' => 'أدخل اسم المستخدم الخاص بك',
+    'holder_password' => 'أدخل كلمة المرور الخاصة بك',
+    'holder_email' => 'أدخل بريدك الإلكتروني',
+    'holder_phone' => 'أدخل رقم هاتفك',
+    'holder_address' => 'أدخل عنوانك',
+    'holder_confirm' => 'قم بتأكيد كلمة المرور الخاصة بك',
     'registration_page' => 'صفحة التسجيل',
+    'registeration_page' => 'صفحة التسجيل',
     'enter_credentials' => 'أدخل بياناتك أدناه ↓',
     'registration_form' => 'نموذج التسجيل',
+    'search' => 'ابحث هنا',
     'all_fields_required' => '*جميع الحقول مطلوبة ما عدا صورة المستخدم',
     'full_name' => 'الاسم الكامل:',
+    'user_image' => 'صورة المستخدم',
     'user_name' => 'اسم المستخدم',
     'email' => 'البريد الإلكتروني:',
     'birth_date' => 'تاريخ الميلاد:',
@@ -29,7 +39,11 @@ return[
     'invalid_full_name' => '*يجب أن يحتوي الاسم الكامل على اسمين على الأقل مفصولين بمسافة',
     'insertion_successful' => 'تمت الإضافة بنجاح',
     'registration_failed' => 'فشل تسجيل المستخدم',
-
+    'register_submit'=> 'سجل',
+    'register'=> 'تسجيل',
+    'image_desc'=> 'مجسم رجل',
+    'info'=>'مزيد من المعلومات:',
+    'rights' => ' 2024 كل الحقوق محفوظة',
 
 
 ]
