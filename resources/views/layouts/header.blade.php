@@ -7,6 +7,8 @@
       <input type="text" class="srch" placeholder="search here">
     </div>
     <a href="#" class="login"></a>
+    <button>EN</button></a>
+    <button>AR</button></a>
   </div>
   <div class="Hero">
     <div class="text">
