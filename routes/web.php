@@ -12,5 +12,3 @@ Route::post('/register', [AuthManager::class,'registerUser'])->name('RegisterUse
 Route::get('/checkUser/{name}',[AuthManager::class,'checkUser'])->name('checkUser');
 
 Route::get('/getActors/{month}/{day}',[FetchController::class,'fetchActors'])->name('getActors');
-
-//Route::get('/change-language/{locale}', [LocalizationController::class,'changeLanguage'])->name('change.language');
