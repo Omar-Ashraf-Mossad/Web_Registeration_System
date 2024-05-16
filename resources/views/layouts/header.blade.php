@@ -1,4 +1,3 @@
-
 <div class="container">
   <img src="https://cdn.iconscout.com/icon/free/png-256/free-database-833-458263.png?f=webp" alt="" class="logo">
   <div class="header">
@@ -6,9 +5,9 @@
     <div class="con">
       <input type="text" class="srch" placeholder="search here">
     </div>
-    <a href="#" class="login"></a>
-    <button>EN</button></a>
-    <button>AR</button></a>
+    <a href="locale/en" >English</a>
+
+    <a href="locale/ar">Arabic</a>
   </div>
   <div class="Hero">
     <div class="text">

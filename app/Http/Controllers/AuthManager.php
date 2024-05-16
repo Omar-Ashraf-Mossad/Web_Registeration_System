@@ -11,18 +11,7 @@ class AuthManager extends Controller
 
     function registerUser(Request $request){
 
-        $messages = [
-           'required' => 'The :attribute field is required.',
-           'string' => 'The :attribute field must be a string.',
-            'unique' => 'The :attribute field already exists.',
-            'fullName.regex' =>   'Full name must contain at least two names spearated by space',
-            'email.regex' => 'the email value is not valid',
-            'date' => 'The :attribute field must be a valid date',
-            'password.min' => 'The password field must be at least 8 characters long',
-            'password.regex' => 'The password field must contain at least 1 number and 1 special character',
-            'username.unique' => 'The username must be unique',
-            'phone.regex' => 'phone number must be 11 digit and starts with either[011,010,012]',
-        ];
+       
         $request->validate([
             'fullName' =>array(
                                 'required',
@@ -45,7 +34,7 @@ class AuthManager extends Controller
                 'regex: /[^\w\d]|_/'
             ),
             'userImage' =>'nullable|image|mimes:jpeg,png,jpg,gif'
-        ],$messages);
+        ]);
 
         $user = new User();
         if($request->hasFile('userImage')){
